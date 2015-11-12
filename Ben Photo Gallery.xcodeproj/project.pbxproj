@@ -13,6 +13,7 @@
 		BBF4CD9E1BF436E20076B784 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBF4CD9D1BF436E20076B784 /* Images.xcassets */; };
 		BBF4CDA11BF436E20076B784 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF4CD9F1BF436E20076B784 /* LaunchScreen.xib */; };
 		BBF4CDAD1BF436E20076B784 /* Ben_Photo_GalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4CDAC1BF436E20076B784 /* Ben_Photo_GalleryTests.swift */; };
+		BBF4CDB71BF50DD00076B784 /* ViewPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4CDB61BF50DD00076B784 /* ViewPhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		BBF4CDA61BF436E20076B784 /* Ben Photo GalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ben Photo GalleryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBF4CDAB1BF436E20076B784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBF4CDAC1BF436E20076B784 /* Ben_Photo_GalleryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ben_Photo_GalleryTests.swift; sourceTree = "<group>"; };
+		BBF4CDB61BF50DD00076B784 /* ViewPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				BBF4CD961BF436E20076B784 /* AppDelegate.swift */,
 				BBF4CD981BF436E20076B784 /* ViewController.swift */,
 				BBF4CD9A1BF436E20076B784 /* Main.storyboard */,
+				BBF4CDB61BF50DD00076B784 /* ViewPhoto.swift */,
 				BBF4CD9D1BF436E20076B784 /* Images.xcassets */,
 				BBF4CD9F1BF436E20076B784 /* LaunchScreen.xib */,
 				BBF4CD941BF436E20076B784 /* Supporting Files */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBF4CD991BF436E20076B784 /* ViewController.swift in Sources */,
+				BBF4CDB71BF50DD00076B784 /* ViewPhoto.swift in Sources */,
 				BBF4CD971BF436E20076B784 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

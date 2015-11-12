@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0A4-RX-TRN">
@@ -45,16 +45,32 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="ic4-fh-eMM"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="IPb-TA-G7b"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem systemItem="organize" id="1Q8-p3-FTP"/>
+                        <barButtonItem systemItem="organize" id="1Q8-p3-FTP">
+                            <connections>
+                                <action selector="btnPhotoAlbum:" destination="vXZ-lx-hvc" id="prx-8i-QSc"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Photo Album" id="Gnh-cW-AXr">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="Nfa-AT-iTY"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="Nfa-AT-iTY">
+                            <connections>
+                                <action selector="btnCamera:" destination="vXZ-lx-hvc" id="IXK-NY-sLD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="CollectionView" destination="0A4-RX-TRN" id="900-c1-02H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -63,39 +79,56 @@
         <!--Full-Size Image-->
         <scene sceneID="Wmc-rq-0cU">
             <objects>
-                <viewController id="j9d-6w-Hoi" sceneMemberID="viewController">
+                <viewController id="j9d-6w-Hoi" customClass="ViewPhoto" customModule="Ben_Photo_Gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bix-1X-7cx"/>
                         <viewControllerLayoutGuide type="bottom" id="tqJ-dx-Osk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2Su-Li-10C">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ttm-bw-XJ1">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="-113" y="34" width="600" height="600"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem systemItem="action" id="GXC-HK-03v"/>
-                        <barButtonItem width="519" style="plain" systemItem="fixedSpace" id="a1H-ke-Eeg"/>
-                        <barButtonItem systemItem="trash" id="0Rc-tG-AlJ"/>
+                        <barButtonItem systemItem="action" id="GXC-HK-03v">
+                            <connections>
+                                <action selector="btnExport:" destination="j9d-6w-Hoi" id="GfT-0n-MYR"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="298" style="plain" systemItem="fixedSpace" id="a1H-ke-Eeg"/>
+                        <barButtonItem systemItem="trash" id="0Rc-tG-AlJ">
+                            <connections>
+                                <action selector="btnTrash:" destination="j9d-6w-Hoi" id="gmU-bq-Ubk"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Full-Size Image" id="saf-Md-aEC">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="aUy-4B-eUh"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="aUy-4B-eUh">
+                            <connections>
+                                <action selector="btnCancel:" destination="j9d-6w-Hoi" id="QKY-UG-hqF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imgView" destination="ttm-bw-XJ1" id="iqm-ay-PKp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mY-tt-6Wp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1782" y="293"/>
+            <point key="canvasLocation" x="1578.5" y="292.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ryl-xQ-Ufj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="858-Gu-dr0" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dnO-fe-u9r">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -110,7 +143,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wek-Of-V89" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="519" y="293"/>
+            <point key="canvasLocation" x="728.5" y="292.5"/>
         </scene>
     </scenes>
 </document>

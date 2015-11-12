@@ -8,7 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+let reuseIdentifier = "PhotoCell"
+
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    // Actions and Outlets
+    
+    @IBAction func btnCamera(sender: AnyObject) {
+    }
+    
+    @IBAction func btnPhotoAlbum(sender: AnyObject) {
+    }
+      
+    @IBOutlet var CollectionView: UICollectionView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +31,22 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    // UICollectionViewDataSource Methods
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell: UICollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! UICollectionViewCell
+        
+        //Modify the Cell
+        cell.backgroundColor = UIColor.blueColor()
+        
+        return cell
     }
 
 

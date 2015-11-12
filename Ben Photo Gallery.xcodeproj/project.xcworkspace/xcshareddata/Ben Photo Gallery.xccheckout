@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AD546D88-647E-48F5-A05B-CC11FE870928</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>ECE1C4655516C0657125606FCC980532003B83AB</key>
+		<string>https://github.com/bpliang3/Ben-Photo-Gallery.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Ben Photo Gallery.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>ECE1C4655516C0657125606FCC980532003B83AB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/bpliang3/Ben-Photo-Gallery.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>ECE1C4655516C0657125606FCC980532003B83AB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>ECE1C4655516C0657125606FCC980532003B83AB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Ben%20Photo%20Gallery</string>
+		</dict>
+	</array>
+</dict>
+</plist>
