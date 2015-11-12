@@ -15,9 +15,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // Actions and Outlets
     
     @IBAction func btnCamera(sender: AnyObject) {
+        println("Camera was pushed")
     }
     
     @IBAction func btnPhotoAlbum(sender: AnyObject) {
+        println("Photo Album was pushed")
     }
       
     @IBOutlet var CollectionView: UICollectionView!
