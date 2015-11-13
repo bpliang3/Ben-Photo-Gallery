@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import Photos
 
 let reuseIdentifier = "PhotoCell"
+let albumName = "My App"
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    var assetCollection: PHAssetCollection!
+    var photosAsset: PHFetchResult!
+    var albumFound: Bool = false
     
     // Actions and Outlets
     
@@ -28,6 +34,27 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let fetchOptions = PHFetchOptions()
+        fetchOptions.predicate = NSPredicate(format: "title = %@", albumName)
+        
+        // Check if the folder exists, if not, create
+        let collection = PHAssetCollection.fetchAssetCollectionsWithType(.Album, subtype: .Any, options: fetchOptions)
+        
+        if collection.firstObject != nil {
+            // found the album
+            self.albumFound = true
+            self.assetCollection = collection.firstObject as! PHAssetCollection // would have problems if user has multiple album folders named "My App"
+        } else {
+            // create the folder
+            NSLog("\nFolder \"$@\" does not exist\n Creating now...", albumName)
+            PHPhotoLibrary.sharedPhotoLibrary().performChanges({
+                let request = PHAssetCollectionChangeRequest.creationRequestForAssetCollectionWithTitle(albumName)
+                }, completionHandler: {(success:Bool, error:NSError!)in
+                    NSLog("Creation of folder -> %@", (success ? "Success" : "Error!"))
+                    self.albumFound = (success ? true:false)
+                })
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

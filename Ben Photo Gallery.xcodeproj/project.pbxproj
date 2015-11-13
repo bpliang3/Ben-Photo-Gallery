@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BBDBA4811BF64A5400C449C2 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDBA4801BF64A5400C449C2 /* Photos.framework */; };
 		BBF4CD971BF436E20076B784 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4CD961BF436E20076B784 /* AppDelegate.swift */; };
 		BBF4CD991BF436E20076B784 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4CD981BF436E20076B784 /* ViewController.swift */; };
 		BBF4CD9C1BF436E20076B784 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBF4CD9A1BF436E20076B784 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BBDBA4801BF64A5400C449C2 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		BBF4CD911BF436E20076B784 /* Ben Photo Gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ben Photo Gallery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBF4CD951BF436E20076B784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBF4CD961BF436E20076B784 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDBA4811BF64A5400C449C2 /* Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +64,7 @@
 		BBF4CD881BF436E20076B784 = {
 			isa = PBXGroup;
 			children = (
+				BBDBA4801BF64A5400C449C2 /* Photos.framework */,
 				BBF4CD931BF436E20076B784 /* Ben Photo Gallery */,
 				BBF4CDA91BF436E20076B784 /* Ben Photo GalleryTests */,
 				BBF4CD921BF436E20076B784 /* Products */,
@@ -413,6 +417,7 @@
 				BBF4CDB21BF436E20076B784 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BBF4CDB31BF436E20076B784 /* Build configuration list for PBXNativeTarget "Ben Photo GalleryTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				BBF4CDB51BF436E20076B784 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
